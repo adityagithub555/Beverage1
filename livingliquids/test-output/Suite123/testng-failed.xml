@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Suite123]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="tests" name="Test1(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="test.TestNG2nd">
+        <methods>
+          <include name="aftersuite"/>
+          <include name="beforeclass"/>
+          <include name="test"/>
+          <include name="launchBrowser"/>
+          <include name="aftertest"/>
+          <include name="afterclass"/>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+          <include name="beforesuit"/>
+        </methods>
+      </class> <!-- test.TestNG2nd -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="4" parallel="tests" name="Test2(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="test.TestNG1st">
+        <methods>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+          <include name="afterclass"/>
+          <include name="beforeclass"/>
+          <include name="beforesuit"/>
+          <include name="aftersuite"/>
+          <include name="test"/>
+          <include name="launchBrowser"/>
+          <include name="aftertest"/>
+        </methods>
+      </class> <!-- test.TestNG1st -->
+      <class name="test.TestNG2nd">
+        <methods>
+          <include name="beforeclass"/>
+          <include name="aftersuite"/>
+          <include name="test"/>
+          <include name="launchBrowser"/>
+          <include name="aftertest"/>
+          <include name="afterclass"/>
+          <include name="beforemethod"/>
+          <include name="aftermethod"/>
+          <include name="beforesuit"/>
+        </methods>
+      </class> <!-- test.TestNG2nd -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite123] -->
